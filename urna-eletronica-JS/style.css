@@ -168,3 +168,11 @@ body {
     border-top: 2px solid #000;
     padding: 8px;
 }
+
+
+.aviso--grande {
+    font-style: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: red;
+}
