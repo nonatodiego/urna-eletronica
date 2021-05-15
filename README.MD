@@ -23,7 +23,7 @@
 
 Afim de treinar tecnicas de desenvolvimento frontend desenvolvi esta urna, simulando uma urna real, utilizando apenas HTML & CSS puro e JS
 
-<a href="https://caravan-rosy.vercel.app/">Demonstração</a>
+<a href="urnaeletronicajspuro.netlify.app">Demonstração</a>
 
 ## Tecnologias :rocket:
 
