@@ -5,18 +5,20 @@ let etapas = [
         candidatos: [
             {
                 numero: '38111',
-                nome: 'Fulano de Tal',
+                nome: 'Bender Futurama',
                 partido: 'ABC',
+                vice:'',
                 fotos: [
                     {url: 'candidato-38111.png', legenda: 'Vereador', small: false}
                 ]
             },
             {
                 numero: '77222',
-                nome: 'Beltrano da Silva',
+                nome: 'Homer Simpson',
                 partido: 'DEFG',
+                vice:'',
                 fotos: [
-                    {url: '77222.png',legenda: 'Vereador',small: false}
+                    {url: 'candidato-77222.png',legenda: 'Vereador',small: false}
                 ]
             }
         ]
@@ -27,22 +29,22 @@ let etapas = [
         candidatos: [
             {
                 numero: '99',
-                nome: 'Ciclano',
+                nome: 'Mr.Popo',
                 partido: 'ABC',
-                vice: 'Cic',
+                vice: 'Homem de ferro',
                 fotos: [
-                    {url: 'Mrpopo.png', legenda: 'Prefeito', small: false},
-                    {url: '99.png', legenda: 'Vice-Prefeito', small: true}
+                    {url: 'candidato-p-99.png', legenda: 'Prefeito', small: false},
+                    {url: 'candidato-vp-99.png', legenda: 'Vice-Prefeito', small: true}
                 ]
             },
             {
                 numero: '84',
-                nome: 'Zulano',
+                nome: 'Super Mario',
                 partido: 'QWERTY',
-                vice: 'Zul',
+                vice: 'Jake hora de aventura',
                 fotos: [
-                    {url: '84.png', legenda: 'Prefeito', small: false},
-                    {url: 'sadan.png', legenda: 'Vice-Prefeito', small: true}
+                    {url: 'candidato-p-84.png', legenda: 'Prefeito', small: false},
+                    {url: 'candidato-vp-84.png', legenda: 'Vice-Prefeito', small: true}
                 ]
             }
         ]

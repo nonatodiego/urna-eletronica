@@ -45,12 +45,24 @@ function atualizaInterface () {
         }
     })
     if(candidato.length > 0) {
-        candidato = candidato[0];
-        seuVotoPara.style.display = 'block'
-        aviso.style.display = 'block'
-        descricao.innerHTML = `
-        Nome: ${candidato.nome}<br/>
-        Partido: ${candidato.partido}`
+        candidato = candidato[0];        
+
+        // controle para botar vice candidato
+        if(candidato.vice === ''){
+            seuVotoPara.style.display = 'block'
+            aviso.style.display = 'block'
+            descricao.innerHTML = `
+            Nome: ${candidato.nome}<br/>
+            Partido: ${candidato.partido}`
+        } else {
+            seuVotoPara.style.display = 'block'
+            aviso.style.display = 'block'
+            descricao.innerHTML = `
+            Nome: ${candidato.nome}<br/>
+            Partido: ${candidato.partido}<br/>
+            Vice: ${candidato.vice}            
+            `
+        }
         
         let fotosHTML = ''
 
@@ -126,7 +138,10 @@ function confirma(){
             comecarEtapa();
         } else {
             document.querySelector('.tela').innerHTML = '<div class="aviso--gigante pisca">FIM</div>';
-            console.log(votos);
+            // console.log(votos);
+            document.querySelector('.teclado--botao.btn-branco').setAttribute('onclick', '') ;
+            document.querySelector('.teclado--botao.btn-corrige').setAttribute('onclick', '') ;
+            document.querySelector('.teclado--botao.btn-confirma').setAttribute('onclick', '') ;
         }
     }
 }
