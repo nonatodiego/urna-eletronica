@@ -10,6 +10,7 @@ let numeros = document.querySelector('.d-1-3')
 let etapaAtual = 0
 let numero = ''
 let votoBranco = false;
+let votos = [];
 
 function comecarEtapa(){
     let etapa = etapas[etapaAtual]
@@ -66,8 +67,6 @@ function atualizaInterface () {
         aviso.style.display = 'block'
         descricao.innerHTML = '<div class="aviso--grande pisca">VOTO NULO</div>'
     }
-
-    console.log('candidato', candidato)
 }
 
 // controle botoes
@@ -89,6 +88,7 @@ function clicou(n) {
 function branco() {
     numero = ''
     votoBranco = true
+
     seuVotoPara.style.display = 'block'
     aviso.style.display = 'block'
     numeros.innerHTML = ''
@@ -107,19 +107,26 @@ function confirma(){
     let votoConfirmado = false
 
     if(votoBranco === true) {
-        votoConfirmado = true
-        console.log('confirma branco')
-    } else if(numero.length === etapa.numeros){
-        votoConfirmado = true
-        console.log('confirma como '+numero)
+        votoConfirmado = true;
+        votos.push({
+            etapa: etapas[etapaAtual].titulo,
+            voto: 'branco'
+        });
+    } else if(numero.length === etapa.numeros) {
+        votoConfirmado = true;
+        votos.push({
+            etapa: etapas[etapaAtual].titulo,
+            voto: numero
+        });
     }
-
+    
     if(votoConfirmado) {
-        etapaAtual ++ 
-        if(etapas[etapaAtual] !== null){
-            comecarEtapa()
+        etapaAtual++;
+        if(etapas[etapaAtual] !== undefined) {
+            comecarEtapa();
         } else {
-            console.log("FIM")
+            document.querySelector('.tela').innerHTML = '<div class="aviso--gigante pisca">FIM</div>';
+            console.log(votos);
         }
     }
 }
