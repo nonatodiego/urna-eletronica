@@ -8,7 +8,7 @@ let etapas = [
                 nome: 'Fulano de Tal',
                 partido: 'ABC',
                 fotos: [
-                    {url: '38111.png', legenda: 'Vereador', small: false}
+                    {url: 'candidato-38111.png', legenda: 'Vereador', small: false}
                 ]
             },
             {
@@ -31,7 +31,7 @@ let etapas = [
                 partido: 'ABC',
                 vice: 'Cic',
                 fotos: [
-                    {url: 'iron-man.png', legenda: 'Prefeito', small: false},
+                    {url: 'Mrpopo.png', legenda: 'Prefeito', small: false},
                     {url: '99.png', legenda: 'Vice-Prefeito', small: true}
                 ]
             },
